@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp5v6weesy7q2"]
+
+[ext_resource type="PackedScene" uid="uid://cxoc7bfb7dobe" path="res://heart.tscn" id="1_d0xxp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2c6x0"]
+size = Vector2(144, 20)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(530, 390)
+shape = SubResource("RectangleShape2D_2c6x0")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(528, 255)
+shape = SubResource("RectangleShape2D_2c6x0")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(609, 323)
+rotation = 1.57507
+shape = SubResource("RectangleShape2D_2c6x0")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="StaticBody2D2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2/StaticBody2D"]
+position = Vector2(444, 323)
+rotation = 1.56968
+shape = SubResource("RectangleShape2D_2c6x0")
+
+[node name="CharacterBody2D" parent="StaticBody2D2" instance=ExtResource("1_d0xxp")]
+position = Vector2(106, 137)
