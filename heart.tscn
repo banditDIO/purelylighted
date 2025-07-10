@@ -4,16 +4,17 @@
 [ext_resource type="Texture2D" uid="uid://baupansntapb6" path="res://heart.png" id="2_7p8dj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cixvg"]
-size = Vector2(52, 46)
+size = Vector2(40, 40)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(-22, -10)
 script = ExtResource("1_7p8dj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(420, 188)
+position = Vector2(4, -2)
 shape = SubResource("RectangleShape2D_cixvg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(418, 189)
+position = Vector2(0, 1.52588e-05)
 scale = Vector2(0.353989, 0.353989)
 texture = ExtResource("2_7p8dj")
